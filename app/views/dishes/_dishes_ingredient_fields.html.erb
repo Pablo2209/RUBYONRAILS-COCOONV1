@@ -1,0 +1,13 @@
+<div class="nested-fields">
+    <div class="field">
+        <%= f.label :ingredient_id %>
+        <%= f.select :ingredient_id, 
+        options_from_collection_for_select(@ingredients, :id, :name) %>
+    </div>
+    
+     <div class="field">
+        <%= f.label :quantity %>
+        <%= f.number_field :quantity %>
+    </div>
+        <%= link_to_remove_association "remove task", f %>
+</div>
